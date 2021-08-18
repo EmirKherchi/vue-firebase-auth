@@ -2,13 +2,28 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/register">Register</router-link> |
+      <router-link to="/dashboard">Dashboard</router-link> |
+      <button @click="logout()">Logout</button>
     </div>
     <router-view />
   </div>
 </template>
 
+<script>
+export default {
+  methods: {
+    logout() {
+      console.log("logOut Mother fuck");
+    },
+  },
+};
+</script>
+
 <style>
+input {
+  margin-right: 20px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
